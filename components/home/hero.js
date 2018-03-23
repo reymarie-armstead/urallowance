@@ -14,7 +14,8 @@ const heroClass = css({
   backgroundRepeat: 'no-repeat',
   position: 'relative',
   marginTop: '-75px!important',
-  paddingBottom: '100px!important',
+  padding: '15px!important',
+  paddingTop: '20vw!important',
   '@media(min-width: 768px)': {
     paddingTop: '220px!important',
   },
@@ -24,7 +25,7 @@ const heroClass = css({
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-    padding: '8vw 0',
+    padding: '10vw 0',
     position: 'absolute',
     left: '0',
     right: '0',
@@ -44,8 +45,12 @@ const tokendetails = css({
   display: 'inline-block',
   ' p':{
     float: 'left',
-    width: '290px',
-    fontSize: '24px',
+    width: '250px',
+    fontSize: '20px',
+    '@media(min-width: 768px)': {
+      width: '290px',
+      fontSize: '24px',
+  },
   }
 })
 
@@ -71,17 +76,17 @@ const progressClass = css({
   }
 })
 
-const aboutClass = css({
-  padding: '120px 40px!important', 
-})
 
 
 const testimonial = css({
   ' .segment':{
-    padding: '150px 100px',
+    padding: '70px 15px 50px',
     boxShadow: '0px 1px 12px 0 rgba(34,36,38,.2)',
     position: 'relative',
     border: '0',
+    '@media(min-width: 768px)': {
+      padding: '150px 100px',
+    },
     ':before':{
       content:'""',
       backgroundImage: `url('/static/img/quote.png')`,
@@ -94,12 +99,19 @@ const testimonial = css({
   },
   ' h1':{
     color: '#1b1b5b',
-    fontSize: '45px',
+    fontSize: '8vw',
+    '@media(min-width: 768px)': {
+      fontSize: '45px',
+    },
   },
   ' p':{
     color: '#4a4a4a',
-    fontSize: '24px',
-    marginBottom: '50px',
+    fontSize: '20px',
+    marginBottom: '100px',
+    '@media(min-width: 768px)': {
+      fontSize: '24px',
+      marginBottom: '50px',
+    },
   },
   ' a':{
     
@@ -107,12 +119,19 @@ const testimonial = css({
 })
 
 const testiauthor = css({
-  float: 'right',
+  float: 'none',
+  '@media(min-width: 768px)': {
+      float: 'right',
+    },
   ' p':{
-    textAlign: 'left',
+    textAlign: 'center',
     color: '#1b1b5b',
     fontSize: '18px',
     position: 'relative',
+    marginBottom: '0px',
+    '@media(min-width: 768px)': {
+      textAlign: 'left',
+    },
     ':before':{
       content:'""',
       width: '75px',
@@ -120,25 +139,43 @@ const testiauthor = css({
       borderRadius: '50%',
       backgroundColor: '#2852ea',
       position: 'absolute',
-      left: '-100px',
-      top: '-20px',
+      transform: 'translate(-50%, -100%)',
+      left: '50%',
+        '@media(min-width: 768px)': {
+          left: '-100px',
+          top: '-20px',
+          transform: 'translate(0, 0)',
+        },
       },
     ' span':{
       color: '#bdbdbd',
+      fontSize: '16px',
     }
   },
 })
 
+const aboutClass = css({
+  padding: '15px 15px 50px!important',
+  '@media(min-width: 768px)': {
+      padding: '120px 40px!important',
+    },
+})
 
 const aboutURA = css({
   backgroundColor: '#1b1b5b',
   marginTop: '30px',
   padding: '30px',
   ' h1':{
-    fontSize: '30px',
+    fontSize: '8vw',
     fontFamily: `'Montserrat', sans-serif`,
     '@media(min-width: 768px)': {
-      fontSize: '42px'
+      fontSize: '34px'
+    },
+    '@media(min-width: 992px)': {
+      fontSize: '2.5vw'
+    },
+    '@media(min-width: 1200px)': {
+      fontSize: '30px'
     },
   },
   ' p':{
@@ -178,22 +215,29 @@ const partnersClass = css({
 
 const teamClass = css({
   paddingTop: '100px!important',
-  paddingBottom: '200px!important',
+  paddingBottom: '100px!important',
+  '@media(min-width: 768px)': {
+      paddingBottom: '200px!important',
+    },
   ' h1':{
+    fontFamily: `'Montserrat', sans-serif`,
     color: '#1b1b5b',
     fontWeight: '600',
     marginBottom: '10px',
     textAlign: 'center',
-    fontSize: '40px',
+    fontSize: '38px',
     '@media(min-width: 768px)': {
       fontSize: '52px',
     },
   },
   ' h2':{
-    fontSize: '32px',
+    fontSize: '28px',
     color: '#1b1b5b',
     fontWeight: '600',
     marginBottom: '10px',
+    '@media(min-width: 768px)': {
+      fontSize: '32px',
+    },
   },
   ' p':{
     fontSize: '14px',
@@ -214,13 +258,135 @@ const teamimg = css({
 })
 
 const roadtripClass = css({
+  maxWidth: '1250px',
+  margin: '0 auto!important',
   ' h1':{
     color: '#1b1b5b',
-    fontSize: '42px',
+    fontSize: '12vw',
+    marginBottom: '0',
     '@media(min-width: 768px)': {
+      fontSize: '7vw',
+    },
+    '@media(min-width: 992px)': {
+      marginBottom: '20px',
       fontSize: '72px',
     },
+  },
+  ' img':{
+    '@media(min-width: 1150px)': {
+      height: '1100px',
+    },
   }
+})
+
+const roadtripTandM = css({
+  position:'relative',
+  ':before':{
+    content:'""',
+    backgroundImage: `url('/static/img/road.jpg')`,
+    position: 'absolute',
+    width: '20px',
+    top: '0',
+    bottom: '0',
+    left: '42px',
+    display: 'block',
+    '@media(min-width: 992px)': {
+      display: 'none',
+    },
+  },
+  ' h2':{
+    color: '#494a4c',
+    fontSize: '8vw',
+    fontFamily: `'Montserrat', sans-serif`,
+    fontWeight: '600',
+    marginBottom: '10px',
+    marginLeft: '140px',
+    '@media(min-width: 768px)': {
+      fontSize: '30px',
+    },
+  },
+  ' h3':{
+    color: '#494a4c',
+    fontWeight: '500',
+    marginBottom: '10px',
+    fontSize: '6vw',
+    fontFamily: `'Montserrat', sans-serif`,
+    marginLeft: '140px',
+    '@media(min-width: 768px)': {
+      fontSize: '26px',
+    },
+  },
+  ' p':{
+    color: '#494a4c',
+    fontSize: '16px',
+    marginBottom: '30px',
+    marginLeft: '70px'
+  },
+  ' img':{
+    float: 'left',
+  }
+})
+
+const leftDiv = css({
+  marginTop: '100px',
+  ' h2':{
+    color: '#494a4c',
+    fontFamily: `'Montserrat', sans-serif`,
+    fontWeight: '600',
+    marginBottom: '10px',
+    '@media(min-width: 768px)': {
+      fontSize: '34px',
+    },
+  },
+  ' h3':{
+    color: '#494a4c',
+    fontWeight: '500',
+    marginBottom: '10px',
+    fontFamily: `'Montserrat', sans-serif`,
+    '@media(min-width: 768px)': {
+      fontSize: '26px',
+    },
+  },
+  ' p':{
+    color: '#494a4c',
+    fontSize: '16px',
+    float: 'right',
+    marginBottom: '25px',
+    '@media(min-width: 1150px)': {
+      maxWidth: '333px',
+    },
+  },
+})
+
+const rightDiv = css({
+  ' h2':{
+    color: '#494a4c',
+    fontSize: '8vw',
+    fontFamily: `'Montserrat', sans-serif`,
+    fontWeight: '600',
+    marginBottom: '10px',
+    '@media(min-width: 768px)': {
+      fontSize: '34px',
+    },
+  },
+  ' h3':{
+    color: '#494a4c',
+    fontWeight: '500',
+    marginBottom: '10px',
+    fontSize: '6vw',
+    fontFamily: `'Montserrat', sans-serif`,
+    '@media(min-width: 768px)': {
+      fontSize: '26px',
+    },
+  },
+  ' p':{
+    color: '#494a4c',
+    fontSize: '16px',
+    marginBottom: '25px',
+    '@media(min-width: 1150px)': {
+      maxWidth: '333px',
+    },
+  },
 })
 
 const chartClass = css({
@@ -241,11 +407,11 @@ const chartClass = css({
   },
   ' h1':{
     color: '#1b1b5b',
-    fontSize: '42px',
+    fontSize: '12vw',
     '@media(min-width: 768px)': {
       fontSize: '72px',
     },
-  }
+  },
 })
 
 const commentClass = css({
@@ -254,15 +420,22 @@ const commentClass = css({
   paddingBottom: '0px!important',
   ' h1':{
     color: '#1b1b5b',
-    fontSize: '34px',
+    fontSize: '22px',
     fontWeight: '600',
+    marginTop: '30px',
     fontFamily: `'Montserrat', sans-serif`,
+    '@media(min-width: 768px)': {
+      fontSize: '34px',
+    },
   },
   ' p':{
     color: '#1b1b5b',
-    fontSize: '20px',
+    fontSize: '18px',
     fontWeight: '300',
     float: 'right',
+    '@media(min-width: 768px)': {
+      fontSize: '20px',
+    },
   }
 })
 
@@ -349,7 +522,7 @@ const heroContent = [
   <Text
     is="h1"
     css={{ color: '#fff', marginBottom: '10px' }}
-    f={['46px', '48px', '50px', '52px']}
+    f={['9vw', '5vw', '3.5vw', '52px']}
     key="slogan"
   >
     Family-Smart Contracts can solidify the unity of UR-Family 
@@ -371,7 +544,7 @@ const urkidsContent = [
   <Text
     is="h1"
     css={{ color: '#1b1b5b', marginBottom: '15px', fontWeight: '600' }}
-    f={['26px', '28px', '40px', '42px']}
+    f={['8vw', '5vw', '42px']}
     key="urkids"
   >
     OUR future and the future for UR-kids (your kids) will be entangled with cryptocurrency.
@@ -420,7 +593,7 @@ export default () => [
   <Div key="body">
     <Grid className={`${heroClass}`} padded={false}>
       <Grid.Row>
-        <Grid.Column tablet={8} computer={8} centered="true" verticalAlign="bottom" only="tablet computer">
+        <Grid.Column verticalAlign="bottom" tablet={8} computer={8} centered="true" only="tablet computer">
           <Img src="/static/img/phone.png" display="block" maxWidth="100%" margin="auto"/>
         </Grid.Column>
         <Grid.Column verticalAlign="top" mobile={16} tablet={8} computer={6}>
@@ -442,7 +615,7 @@ export default () => [
           <Progress className={`${progressClass}`} percent={80} />
           <Text 
             is="p"
-            css={{ fontWeight: '300', float: 'right' }}
+            css={{ fontWeight: '300', float: 'right', marginBottom: '120px!important' }}
             f={['16px', '20px', '22px']}
             >This ICO will only last for  
             <Text 
@@ -456,12 +629,12 @@ export default () => [
       </Grid.Row>
     </Grid>
 
-    <Grid>
+    <Grid padded="true">
       <Grid.Row>
         <Grid.Column tablet={8} computer={8} centered="true" verticalAlign="middle" only="tablet computer">
           <Img src="/static/img/img2.png" display="block" maxWidth="100%" marginLeft="-130px" />
         </Grid.Column>
-        <Grid.Column verticalAlign="middle" mobile={16} tablet={8} computer={5}>
+        <Grid.Column verticalAlign="middle" mobile={16} tablet={8} computer={7}>
           {urkidsContent}
         </Grid.Column>
       </Grid.Row>
@@ -526,7 +699,7 @@ export default () => [
         <Grid.Column verticalAlign="middle" textAlign="center">
           <Segment>
             <h1>They Are Already Talking About Us...</h1>
-            <p>If anyone doubts the sustained viability of cryptocurrencies, then please observe the increasing adoption by our children. Their views and understandings will be the foundation of their adult generation and those views will mold the world. <Link href="https://t.co/K2JBydCX6F"><a> https://t.co/K2JBydCX6F via @youtube</a></Link></p>
+            <p>If anyone doubts the sustained viability of cryptocurrencies, then please observe the increasing adoption by our children. Their views and understandings will be the foundation of their adult generation and those views will mold the world. <Link href="https://t.co/K2JBydCX6F"><a>https://t.co/K2JBydCX6F</a></Link> via @youtube</p>
             <div className={`${testiauthor}`}>
               <p>— John McAfee (@officialmcafee) <br /><span>January 22, 2018</span></p>
             </div>
@@ -637,14 +810,123 @@ export default () => [
     </Grid>
 
     <Grid centered className={`${roadtripClass}`}>
-      <Grid.Row>
-        <Grid.Column verticalAlign="middle" textAlign="center">
           <h1>They Road Trip</h1>
+      <Grid.Row>
+        <Grid.Column verticalAlign="top" textAlign="right" computer={5} only="computer">
+          <Div className={`${leftDiv}`}>
+            <h2>02 Formation</h2>
+            <p>This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents.</p>
+          </Div>
+          <Div className={`${leftDiv}`}>
+            <h3>04 After Pre-Sale/ Before ICO</h3>
+            <p float="right">This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents.</p>
+          </Div>
+          <Div className={`${leftDiv}`}>
+            <h3>06 ICO ROUND 2</h3>
+            <p>This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents.</p>
+          </Div>
+          <Div className={`${leftDiv}`}>
+            <h3>08 URWorld: Mixed Reality Edition</h3>
+            <p>This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents.</p>
+          </Div>
+          <Div className={`${leftDiv}`}>
+            <h2>10 Beyond</h2>
+            <p>This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents.</p>
+          </Div>
+        </Grid.Column>
+        <Grid.Column verticalAlign="top" textAlign="top" computer={6} only="computer">
           <Img src="/static/img/roadtrip.png" display="block" maxWidth="100%" margin="0 auto" />
+        </Grid.Column>
+        <Grid.Column verticalAlign="top" textAlign="left" computer={5} only="computer">
+          <Div className={`${rightDiv}`}>
+            <h2>01 Concept</h2>
+            <p>This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents.</p>
+          </Div>
+          <Div className={`${rightDiv}`}>
+            <h2>03 Preparation</h2>
+            <p>This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents.</p>
+          </Div>
+          <Div className={`${rightDiv}`}>
+            <h3>05 ICO ROUND 1</h3>
+            <p>This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents.</p>
+          </Div>
+          <Div className={`${rightDiv}`}>
+            <h2>07 Post ICO</h2>
+            <p>This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents.</p>
+          </Div>
+          <Div className={`${rightDiv}`}>
+            <h3>09 Microsoft Hololens Partnership</h3>
+            <p>This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents.</p>
+          </Div>
         </Grid.Column>
       </Grid.Row>
     </Grid>
-
+    <Grid padded="true" className={`${roadtripTandM}`}>
+      <Grid.Row>
+        <Grid.Column verticalAlign="top" textAlign="left" only="mobile tablet">
+          <div>
+            <Img src="/static/img/road1.png" display="block" maxWidth="100%" />
+            <span><h2>01 Concept</h2>
+             <p>This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents.</p>
+            </span>
+          </div>
+          <div>
+            <Img src="/static/img/road2.png" display="block" maxWidth="100%"/>
+            <span><h2>02 Formation</h2>
+             <p>This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents.</p>
+            </span>
+          </div>
+          <div>
+            <Img src="/static/img/road3.png" display="block" maxWidth="100%"/>
+            <span><h2>03 Preparation</h2>
+             <p>This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents.</p>
+            </span>
+          </div>
+          <div>
+            <Img src="/static/img/road4.png" display="block" maxWidth="100%"/>
+            <span><h3>04 After Pre-Sale/ Before ICO</h3>
+             <p>This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents.</p>
+            </span>
+          </div>
+          <div>
+            <Img src="/static/img/road5.png" display="block" maxWidth="100%"/>
+            <span><h3>05 ICO ROUND 1</h3>
+             <p>This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents.</p>
+            </span>
+          </div>
+          <div>
+            <Img src="/static/img/road6.png" display="block" maxWidth="100%"/>
+            <span><h3>06 ICO ROUND 2</h3>
+             <p>This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents.</p>
+            </span>
+          </div>
+          <div>
+            <Img src="/static/img/road7.png" display="block" maxWidth="100%"/>
+            <span><h2>07 Post ICO</h2>
+             <p>This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents.</p>
+            </span>
+          </div>
+          <div>
+            <Img src="/static/img/road8.png" display="block" maxWidth="100%"/>
+            <span><h3>08 URWorld: Mixed Reality Edition</h3>
+             <p>This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents.</p>
+            </span>
+          </div>
+          <div>
+            <Img src="/static/img/road9.png" display="block" maxWidth="100%"/>
+            <span><h3>09 Microsoft Hololens Partnership</h3>
+             <p>This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents.</p>
+            </span>
+          </div>
+          <div>
+            <Img src="/static/img/road10.png" display="block" maxWidth="100%"/>
+            <span><h2>10 Beyond</h2>
+             <p>This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents. This is a content placeholder and can be replaced by actual contents.</p>
+            </span>
+          </div>
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
     <Grid centered className={`${chartClass}`}>
       <Grid.Row>
         <Grid.Column verticalAlign="middle" textAlign="center">

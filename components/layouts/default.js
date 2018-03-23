@@ -7,6 +7,7 @@ import MobileMenu from 'components/mobile-menu'
 import Header from 'components/header'
 import Footer from 'components/footer'
 import Loader from 'components/page-loader'
+import { Responsive } from 'semantic-ui-react'
 
 css.global('*', {
   fontFamily: `'Montserrat', sans-serif`,
@@ -26,7 +27,9 @@ const Default = ({
   transparency
 }) => (
   <Div id="outerContainer" position="relative" minHeight="100vh">
-    <MobileMenu isAuthenticated={accessToken} />
+    <Responsive minWidth={320} maxWidth={1093}>
+      <MobileMenu isAuthenticated={accessToken} />
+    </Responsive>
     <Div id="pageWrap">
       <Header clear={clearHeader} transparency={transparency} />
       {pageError && (

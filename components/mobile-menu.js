@@ -10,7 +10,7 @@ const styles = {
     height: '30px',
     right: '15px',
     top: '22px',
-    zIndex: 2000
+    zIndex: 2000,
   },
   bmBurgerBars: {
     background: '#444444',
